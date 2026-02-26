@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Pedidos — Delirium</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            padding: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            .dashboard-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="dashboard-header">
+        <div>
+            <h1 class="logo-text gold-text" style="font-size: 2rem; letter-spacing: 8px;">DELIRIUM</h1>
+            <p class="dim-text" style="letter-spacing: 2px;">PANEL DE PEDIDOS — STAFF</p>
+        </div>
+
+        <div class="mesa-filters" id="mesa-filters">
+            <!-- Filter buttons injected by JS -->
+        </div>
+    </header>
+
+    <main class="order-grid" id="order-grid">
+        <!-- Order cards injected by JS -->
+    </main>
+
+    <div style="position: fixed; bottom: 2rem; left: 2rem;">
+        <a href="index.html" class="btn-filter" style="text-decoration: none;">Ver Menú (Cliente)</a>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>DELIRIUM — Mesa 2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body data-mesa="2">
+
+    <header>
+        <div class="logo-container">
+            <h1 class="logo-text gold-text">DELIRIUM</h1>
+            <p class="mesa-info">Mesa 2</p>
+        </div>
+    </header>
+
+    <nav class="nav-tabs" id="nav-tabs">
+        <!-- Tabs injected by JS -->
+    </nav>
+
+    <main id="menu-container">
+        <!-- Menu sections injected by JS -->
+    </main>
+
+    <div class="cart-floating" id="cart-floating" style="display: none;" onclick="toggleCart()">
+        <span id="cart-count">0 items</span>
+        <span id="cart-total">€0.00</span>
+    </div>
+
+    <!-- Cart Drawer -->
+    <div class="modal-overlay" id="modal-overlay" onclick="toggleCart()"></div>
+    <div class="drawer" id="cart-drawer">
+        <div class="drawer-header">
+            <h2 class="gold-text">Tu Pedido</h2>
+            <button class="btn-qty" onclick="toggleCart()" style="border: none; font-size: 1.5rem;">✕</button>
+        </div>
+        <div class="cart-items-list" id="cart-items-list">
+            <!-- Cart items injected by JS -->
+        </div>
+        <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem;">
+            <div
+                style="display: flex; justify-content: space-between; margin-bottom: 1.5rem; font-size: 1.2rem; font-weight: 700;">
+                <span>Total</span>
+                <span id="drawer-total" class="gold-text">€0.00</span>
+            </div>
+            <button class="btn-accent" style="width: 100%; padding: 1.2rem; border-radius: 12px; font-size: 1rem;"
+                onclick="sendOrder()">Enviar Pedido</button>
+        </div>
+    </div>
+
+    <script src="menu.js"></script>
+</body>
+
+</html>
